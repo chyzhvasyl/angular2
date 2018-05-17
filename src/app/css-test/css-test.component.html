@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</head>
+<body >
+<div class=" container">
+  <h1 style="margin-top:60px; margin-bottom:20px">Задание по CSS</h1>
+
+
+  <label>Выберите цвет</label><br>
+  <div  *ngFor="let color of colors; let i = index  "     class="button"  >
+
+    <div    [ngClass]="{'green': i%3==0, 'red':i%3==1, 'blow': i%3 == 2 }"  >
+        <label><input     type="radio" name="color"  style="display: none;" >  {{color.Name}}</label>
+
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+</body>
+
+</html>

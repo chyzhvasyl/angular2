@@ -1,0 +1,29 @@
+<div class="jumbotron">
+  <h3>Angular 2</h3>
+  <br>
+  <form [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+    <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['Title'].valid && complexForm.controls['Title'].touched || +Title.length > 10 }">
+      <label>Title</label>
+      <input class="form-control" type="text" placeholder="Title" [formControl]="complexForm.controls['Title'] " [(ngModel)]="Title"  >
+    </div>
+    <div class="count"   [ngClass]="{'error': +Title.length > 10  } ">
+      Available {{(10 - +Title.length)}}: symbols
+    </div>
+<br>
+    <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['DisplayName'].valid && complexForm.controls['DisplayName'].touched || +DisplayName.length > 15} ">
+      <label>DisplayName</label>
+      <input class="form-control" type="text" placeholder="DisplayName" [formControl]="complexForm.controls['DisplayName']" [(ngModel)]="DisplayName">
+    </div>
+    <div class="count" [ngClass]="{'error': +DisplayName.length > 15}">    Available  {{(15 - +DisplayName.length)}}  : symbols</div>
+    <br>
+    <div class="form-group" [ngClass]="{'has-error':!complexForm.controls['Category'].valid && complexForm.controls['Category'].touched || +Category.length > 6 }">
+      <label>Category</label>
+      <input class="form-control" type="text" placeholder="Category" [formControl]="complexForm.controls['Category']"  [(ngModel)]="Category">
+    </div>
+    <div class="count" [ngClass]="{'error': +Category.length > 6}">Available {{(6 - +Category.length)}}: symbols</div>
+    <br>
+    <div class="form-group">
+      <button type="submit" class="btn btn-default" [disabled]="!complexForm.valid">Submit</button>
+    </div>
+  </form>
+</div>

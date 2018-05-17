@@ -1,0 +1,47 @@
+.button {
+ width: 100px;
+  display: inline-block;
+  margin: 2px;
+  font-size: 12px;
+  align: center;
+  color: darkgray;
+  text-decoration: none;
+
+  text-align: center;
+  border: 1px solid rgba(131, 146, 163, 0.25);
+
+}
+/*.button:hover {
+ border-color: #71FFA9;
+  color: #71FFA9 ;
+}
+.button:focus {
+  color: rgb(245,247,250);
+  border-top: 1px solid rgb(67,111,136);
+  background-image:
+    linear-gradient(rgb(46,95,122), rgb(36,68,92));
+}
+.button:focus:hover {
+  border-top: 1px solid rgb(49,87,107);
+  background-image:
+    linear-gradient(rgb(33,77,98), rgb(29,57,77));
+}*/
+.red:hover{
+
+  color: #ff514c;
+
+  border: 1px solid #ff514c;
+
+}
+.green:hover{
+
+  color: #63f449;
+  border: 1px solid #63f449;
+
+}
+.blow:hover{
+  border: 1px solid #838FF4;
+  color: #838FF4;
+
+}
+
